@@ -15,6 +15,13 @@
 "RIGHT" return RIGHT;
 "REPEAT" return REPEAT;
 "CIRCLE" return CIRCLE;
+"PENUP" return PENUP;
+"RED" return RED;
+"BLACK" return BLACK;
+"WHITE" return WHITE;
+"YELLOW" return YELLOW;
+"GREEN" return GREEN;
+"BLUE" return BLUE;
 "[" return '[';
 "]" return ']';
 \n /* ignore retour chariot*/

@@ -11,11 +11,9 @@ logogrammaire.tab.c : logogrammaire.y
 
 logogrammaire.tab.h : logogrammaire.y
 	bison -d logogrammaire.y
-	
+
 lex.yy.c : logolex.l logogrammaire.tab.h
 	flex logolex.l
 
 clean :
-	rm lex.yy.c logogrammaire.tab.c logogrammaire.tab.h logotest
-
-
+	rm lex.yy.c logogrammaire.tab.c logogrammaire.tab.h logotest testSVG.svg

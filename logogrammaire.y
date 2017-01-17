@@ -16,25 +16,31 @@
 
 	// Grammaire
 
-	%token FORWARD LEFT RIGHT REPEAT ENTIER CIRCLE
+	%token FORWARD LEFT RIGHT REPEAT ENTIER CIRCLE PENUP RED BLACK WHITE YELLOW GREEN BLUE
 
 	%union{
 		int intval;
 		programme prog;
+		char* couleur;
 	}
 
 %type <intval> FORWARD LEFT RIGHT CIRCLE ENTIER Mouvement
 %type <prog> Instruction Programme
+%type <couleur> PENUP RED BLACK WHITE YELLOW GREEN BLUE COULEUR
 %%
 Programme: Instruction
 			{$$=$1;root=$$;}
 		 | Programme Instruction
 			{$$=ajouterInstFin($1,$2);root=$$;}
 
-Instruction: Mouvement ENTIER
-			{$$=creerINST($1, $2, NULL);}
+Instruction: Mouvement ENTIER COULEUR
+			{$$=creerINST($1, $2, $3, 1, NULL);}
+			|Mouvement ENTIER PENUP
+			{$$=creerINST($1, $2, "none", 0, NULL);}
+			|Mouvement ENTIER
+			{$$=creerINST($1, $2, "red", 1, NULL);}
 		 	|REPEAT ENTIER '['Programme']'
-			{$$=creerINST(4, $2, $4);}
+			{$$=creerINST(4, $2, "red", 1, $4);}
 
 Mouvement: FORWARD
 			{$$=1;}
@@ -44,7 +50,20 @@ Mouvement: FORWARD
 			{$$=3;}
       |CIRCLE
       {$$=5;}
-%%
+
+COULEUR: RED
+			{$$="red";}
+			|BLACK
+			{$$="black";}
+			|WHITE
+			{$$="white";}
+			|YELLOW
+			{$$="yellow";}
+			|GREEN
+			{$$="green";}
+			|BLUE
+			{$$="blue";}
+			%%
 
 int main(){
 	yyparse();
@@ -57,9 +76,7 @@ int main(){
 	}
 
 	creerSVG(file);
-  printf("\ncoucou\n");
   float x1,y1, angle;
-  printf("coucou2\n");
 	x1=250;
 	y1=250;
 	angle=0;
@@ -69,4 +86,3 @@ int main(){
 
 	return 0;
 }
-
