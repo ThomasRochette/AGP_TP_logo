@@ -8,3 +8,5 @@ Title 2
 ####  Title 4
 
 Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italique*, en **bold** ou ~~barrés~~.
+
+> une citation est un paragraphe ouvert par un chevron fermant
