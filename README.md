@@ -41,15 +41,5 @@ Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italiqu
 
 ---
 
-| Header 1      |     2 header    |   header 3 |
-| ------------- |: -------------: | ---------: |
-| 1 Online      |        1        |      value |
-| Line 2        |        2        |      value |
-| 3 Online      |        3        |      value |
-
-1 header | header 2 | 3 header
-- |:-: | -:
-line `1` | **1** | **_valeur_**
-Line 2 | 2 | *Value*
-
----
+<!-- texte en commentaire -->
+''code''
