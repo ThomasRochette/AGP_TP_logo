@@ -7,7 +7,4 @@ Title 2
 ### Title 3 #
 ####  Title 4
 
-bkkhaebhbfdhqb kqhbd qkhdkqhsbkqdb qkd qkd kqsbdk sqkdbqksdb q
-
-
-qsdbqjsbdqhsbd qdjqskd
+Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italique*, en **bold** ou ~~barrés~~.
