@@ -37,6 +37,7 @@ Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italiqu
 ---
 
 <http://www.google.com>
+
 [google] (http://www.google.com "link to google")
 
 ---
