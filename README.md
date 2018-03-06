@@ -15,14 +15,15 @@ Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italiqu
 * item
 * item
 
--
-
 + item
 + item
 + item
 
--
+- item
+- item
+- item
 
-- item
-- item
-- item
+1. Item
+1234. Item
+3. Item
+4. Item
