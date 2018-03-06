@@ -42,4 +42,6 @@ Texte _dont_ certains __éléments__ sont formatés **pour _être_** en *italiqu
 ---
 
 <!-- texte en commentaire -->
-``code``
+``for{
+  print;
+  }``
